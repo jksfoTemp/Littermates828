@@ -1,0 +1,1 @@
+SELECT * FROM if0_35817478_foo.userz0;

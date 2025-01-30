@@ -1,0 +1,161 @@
+Finish
+
+
+
+https://www.freecodecamp.org/news/the-best-php-examples/
+http://localhost:81/PHPLocal/ajax0.php?search=ds&submit=Search
+https://www.w3schools.com/php/php_ajax_database.asp
+
+bzdfb
+sdf
+sdffs
+
+
+
+dsdfgl,l;gfsdalmmflm
+-------------------------------------
+
+// You can store data in local storage using either syntax
+localStorage.userName = "rdegges";
+localStorage.setItem("favoriteColor", "black");
+
+// Once data is in localStorage, it'll stay there forever until it is
+// explicitly removed
+alert(localStorage.userName + " really likes the color " + localStorage.favoriteColor + ".");
+
+// Removing data from local storage is also pretty easy. Uncomment the lines
+// below to destroy the entries
+//localStorage.removeItem("userName");
+//localStorage.removeItem("favoriteColor");
+
+-------------------------------------
+
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+</script>
+
+<script type="text/javascript"> 
+    var thisUserAccount ;          
+    $(document).ready(function() {
+    thisUserAccount= $().SPServices.SPGetCurrentUser({
+    fieldName: "Title",
+    debug: false
+});
+</script>
+
+
+    You aren't closing your $(document).ready(function(){} – 
+    BeerusDev
+    Aug 26, 2021 at 17:03
+
+Add a comment
+-------------------------------------
+
+
+
+
+
+This code worked:
+
+function CallClientOM()
+{
+var context = new SP.ClientContext.get_current();
+this.website = context.get_web();
+this.currentUser = website.get_currentUser();
+context.load(currentUser);
+context.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded), Function.createDelegate(this, this.onQueryFailed));
+}
+
+
+
+function onQuerySucceeded(sender, args)
+ {
+ alert(currentUser.get_loginName());
+ }
+
+
+
+function onQueryFailed(sender, args)
+{
+alert('request failed ' + args.get_message() + '\n'+ args.get_stackTrace());
+}
+
+-------------------------------------
+
+
+<!doctype html>
+<html>
+<head>
+    <title>Windows Username</title>
+</head>
+<body>
+<script type="text/javascript">
+    var WinNetwork = new ActiveXObject("WScript.Network");
+    alert(WinNetwork.UserName); 
+</script>
+</body>
+</html>
+
+
+-------------------------------------
+
+R3dHorn3t1-
+ups.zoho.com@gmail.com
+
+GPPG;E SHEETS ONREEA
+DY EVENT CALLBACK NAMES
+
+	littermates828 rule cc jksfo
+
+https://www.w3schools.com/php/php_ajax_database.asp 
+
+select * from `if0_35817478_foo`.`userz0`
+D
+; PHP Demos
+R3dHorn3t1-
+
+	Bayside PHP
+
+	brysf81@gmail.com 
+	628-999-3006
+
+To: KV 
+; Take Of the Week  
+; Littermates828 ; 
+; cc: JKSFO; MW; JR; JH; F?  
+
+; We all had a great time with horses, the yummy food and the screenful windows. 
+;
+; A big "Thank you" to you and the other Borg for all the work putting it together, it was a fauntastic week. 
+; 
+; Enjoy your weekend
+; 
+; 'da mates. 
+; 
+https://sites.google.com/view/littermates828/home
+
+
+https://sites.google.com/view/littermates828/home
+
+Genuflect 1:24-25. BSM version 
+
+(24) And HE said, “Let the land produce living creatures to annoy man at sleep: the no-see-ums, the creatures that go "BUZZ" in the night, and the biting ones, each according to its annoyance.” 
+
+And it was so. 
+
+(25) He made the windows according to their vantage, the screens according to their internal dimensions, and installed said screens in said windows according to their kinds. 
+
+And HE saw that it was good. 
+
+
+
+And God said, “Let the land produce living creatures according to their kinds: the no-see-ums, the 
+
+And God said, “Let there be flying things of all sizes: the no-see-ums, the 
+
+land produce living creatures according to their kinds: the livestock, the creatures that move along the ground, and the wild animals, each according to its kind.” And it was so. 25 God made the wild animals according to their kinds, the livestock according to their kinds, and all the creatures that move along the ground according to their kinds. And God saw that it was good.
+
+
+
+Genesis 1:24-31

@@ -1,0 +1,89 @@
+getRange(row: Integer, column: Integer): SpreadsheetApp.Range
+
+The row index of the cell to return; row indexing starts with 1.
+
+
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var first = ss.getSheetByName("first");
+
+
+Returns the range with the top left cell at the given coordinates.
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var sheet = ss.getSheets()[0];
+// Passing only two arguments returns a "range" with a single cell.
+var range = sheet.getRange(1, 1);
+var values = range.getValues();
+Logger.log(values[0][0]);
+
+Fuck
+
+var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+var cell = sheet.getRange('B5');
+sheet.setCurrentCell(cell);
+
+
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var sheet = ss.getSheets()[0];
+// Passing only two arguments returns a "range" with a single cell.
+var range = sheet.getRange(1, 1);
+var values = range.getValues();
+Logger.log(values[0][0]);
+
+
+
+sortDefault () 
+sortItem() 
+sortGroup() 
+sortYN()
+
+	getCell(row: Integer, column: Integer): SpreadsheetApp.Range
+
+	The row of the cell relative to the range.
+
+	Returns a given cell within a range.
+		var ss = SpreadsheetApp.getActiveSpreadsheet();
+	var sheet = ss.getSheets()[0];
+
+	var range = sheet.getRange("B2:D4");
+
+	// The row and column here are relative to the range
+	// getCell(1,1) in this code returns the cell at B2
+	var cell = range.getCell(1, 1);
+
+
+function sortItem() { /* Sort by item first, ascending */ 
+  foo = Logger.log(Session.getActiveUser().getEmail());  
+  msg(foo + "kfajs;kf", 3);
+  //SpreadsheetApp.getActive().toast("Message ABC more" + foo, "Title DEF :Warning;",10 );
+  SpreadsheetApp.getActiveSheet().getRange("A2:R150").sort( {column: 3,ascending: true} );
+}
+
+function sortGroup() { /* Group sorted after item, ascending */
+  SpreadsheetApp.getActiveSheet().getRange("A2:R150").sort( {column: 2,ascending: true} );
+}
+
+function sortYN() { /* Selected or not, last sort, descending */ 
+  SpreadsheetApp.getActiveSheet().getRange("A2:R150").sort( {column: 1,ascending: true} );
+}
+
+
+Gatorade
+Soda
+Ketchup
+Mayonaise
+Siracha
+B-fast sand-bisc
+B-fast sand-crois
+Cheese, Chedar
+Cheese, Jack
+Eggs
+Milk
+Hotpockets
+Uncrustables PB&J
+Vinegar, Apple Cider 
+Apples
+Asparagus
+Bananas
+Blueberries
+Grapes
+Rasberries

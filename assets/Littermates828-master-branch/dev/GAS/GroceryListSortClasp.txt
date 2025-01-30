@@ -1,0 +1,206 @@
+
+/******************************************************************************
+ * Joe Kelly (JKSFO | Littermates828)
+ * 2024-01-27  
+ * 
+ * 
+ * Assumes range A1: S150
+ * Uses Clasp Instructions for managing the sorting on the grocery list, got 
+ * interupted during transition to DRY so needs some rework, simple but 
+ * working on something else right now. 
+  
+ *****************************************************************************/
+
+// See if all of these are used ... 
+const vUser =  Session.getActiveUser().getEmail(); 
+var gSS = SpreadsheetApp.getActiveSpreadsheet();
+var gMain = gSS.getSheets()[0];
+var gMainRows = gMain.getDataRange().getValues().length;
+var gLists = gSS.getSheets()[1];
+var gListsRows = gLists.getDataRange().getValues().length;
+var gRowStart = 3, gRowEnd = 150; 
+
+var gRange = "A3:S150"; // Playing field 
+var gSortRow4Value = 1; 
+
+function onOpen(){
+  var myA1 = ""; 
+  try{
+    setDefaults(); 
+  }
+  catch (err) { 
+    console.log(err.Message);
+  }
+} 
+
+function onEdit(e) {
+  var foo = e.getValue; 
+  msg(foo, 4); 
+  ;
+}
+
+function showHiddenCells() {
+  msg("showHiddenCells", 4);
+}
+
+function testA () {
+  ;
+  // Call hide empty cell function 
+  hideEmptyCells(); 
+}
+
+function testB () {
+  ;
+  // Call show empty cell function 
+  showEmptyCells(); 
+}
+
+function showEmptyCells () {
+  msg("showEmptyCells", 4);
+}
+
+function hideEmptyCells () {
+  msg("hideEmptyCells", 4);
+  ;
+}
+
+/*
+function mySort (rng, upperLeft, lowerRight, sortUpDown, sortUpDownText) {
+  try { 
+    SpreadsheetApp.getActiveSheet().getRange(rng).sort( {column: lowerRight, ascending: sortUpDown} );
+    gMain.getRange(upperLeft, lowerRight).setValue(sortUpDownText); 
+  }
+  catch {
+    msg(errText, 4);   
+  }
+}
+*/
+
+function mySort (rng, upperLeft, lowerRight, sortUpDown, sortUpDownText) {
+  try { 
+    SpreadsheetApp.getActiveSheet().getRange(rng).sort( {column: lowerRight, ascending: sortUpDown} );
+    gMain.getRange(upperLeft, lowerRight).setValue(sortUpDownText); 
+  }
+  catch {
+    msg(errText, 4);   
+  }
+}
+
+// NOTE: Vars for cell references don't seem to work so verbose ... 
+function sortYN(){ 
+  try{
+    var lColumn = 1; // CHANGE FOR COLUMN 
+    var myCell = gMain.getRange(gSortRow4Value, lColumn);
+    var mySortAsc = myCell.getValue() ; 
+
+    // WFT!@#$@#!!$@!$! I hate Google App Script 
+    if ((mySortAsc == true) | (mySortAsc == "true") |(mySortAsc == "TRUE")) {
+      mySort (mySortAsc, gRange, gSortRow4Value, lColumn, false, "FALSE");  
+    }
+    else if ((mySortAsc == false) | (mySortAsc == "false") |(mySortAsc == "FALSE")) {
+      mySort (gRange, gSortRow4Value, lColumn, true, "TRUE");  
+    }
+    else{  // Just sort it as ASC 
+      mySort (gRange, gSortRow4Value, lColumn, false, "FALSE");  
+      throw("Sort value in first row can be either TRUE or FALSE. /n Defaulted to TRUE or Ascending. "); 
+    }
+  }
+  catch (errText){
+    // console.log(errText)  
+    msg(errText, 4);   
+  }
+}
+
+function sortItems(){ /* Sort by item first, ascending */ 
+try{
+  var lColumn = 2; // CHANGE FOR COLUMN 
+  var myCell = gMain.getRange(gSortRow4Value, lColumn);
+  var mySortAsc = myCell.getValue() ; 
+
+  // WFT!@#$@#!!$@!$! I hate Google App Script 
+  if ((mySortAsc == true) | (mySortAsc == "true") |(mySortAsc == "TRUE")) {
+    mySort (gRange, gSortRow4Value, lColumn, false, "FALSE");  
+  }
+  else if ((mySortAsc == false) | (mySortAsc == "false") |(mySortAsc == "FALSE")) {
+    mySort (gRange, gSortRow4Value, lColumn, true, "TRUE");  
+  }
+  else{  // Just sort it as ASC 
+    mySort (gRange, gSortRow4Value, lColumn, false, "FALSE");  
+    throw("Sort value in first row can be either TRUE or FALSE. /n Defaulted to TRUE or Ascending. "); 
+  }
+}
+catch (errText){
+  // console.log(errText)  
+  msg(errText, 4);   
+}
+}
+
+function sortGroup(){ /* Group sorted after item, ascending */
+  msg("In sortGroup(" + vSortYNAsc + ")", 2); 
+  try{ 
+    if (vSortGroupAsc == true){
+      SpreadsheetApp.getActiveSheet().getRange("A2:R150").sort( {column: 3,ascending: vSortGroupAsc} );
+      vSortGroupAsc = false;
+    }
+    else{
+      SpreadsheetApp.getActiveSheet().getRange("A2:R150").sort( {column: 3,ascending: vSortGroupAsc} );
+      vSortGroupAsc = true;
+    }
+  }
+  catch (err){
+    console.log(err.Message)
+  }
+}
+
+function sortDefault(){
+  msg(vSortDefaultAsc + "|" + vSortItemAsc + "|" + vSortGroupAsc + "|" + vSortYNAsc , 3); 
+  sortItem; // (true) 
+  sortGroup; // (true) 
+  sortYN; // (true) 
+}
+
+function iLeftTheCell(){
+  msg("iLeftTheCell", 4);
+}
+ 
+function myFunction() {
+ // onOpen(e) 
+ // Logger.log(Session.getActiveUser().getEmail());  
+}
+
+function msg(what, time){
+  SpreadsheetApp.getActive().toast(what, "User: " + vUser, time );
+}
+
+function setDefaults(){
+  ;
+  }
+
+
+/* 
+function demo(){
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheets()[0];
+  var range = sheet.getRange("B2:D4");
+
+  // The row and column here are relative to the range
+  // getCell(1,1) in this code returns the cell at B2
+  var cell = range.getCell(1, 1);
+  Logger.log(cell.getValue());
+}
+
+    if (mySortAsc == true) {
+      gMain.getRange(5, 5).setValue("true"); 
+    }
+    if (mySortAsc == "true") {
+      gMain.getRange(6, 6).setValue("/'true'/"); 
+    }
+    if (mySortAsc == "TRUE") {
+      gMain.getRange(7, 7).setValue("/'TRUE'/"); 
+    }
+
+// https://docs.google.com/spreadsheets/d///18MO8ZwTuoHAUr_U0GeUDKnHWO9VBIEoUlCVliQyNnd0/edit#gid=0&range=H1
+
+*/
+
+

@@ -1,0 +1,311 @@
+
+/* 
+So this is a compendium of the random stats and spreadsheet stuff for Michaels class
+
+C:\Users\jksfo\OneDrive\Bayside\Computers\Code\GAS
+*/
+
+Note: Tara Schendel 
+
+CA - can I get unemployment or disability while in rehab? 
+
+General Assistance - San Francisco vs. San Rafael 
+
+TODO - MyHealthyVet update with photos and thank you notes 
+
+TODO Social worker – Homeless Callifornia/General Assistance/ SF vs. SR 
+
+Q: Proof of no income ? 
+
+
+mp3s 
+gifa 
+
+vacuum 
+dusting 
+scrubbing 
+sweeping 
+laundry folding
+
+finish text local
+chg 2 dives
+transition  fde 
+circles floating 
+
+
+EXLS_RAND_1M_135.xlsm
+
+Option Explicit
+
+Sub foo0()
+  
+  ' VBA all variants
+  Dim myRnd, numOfRows, lastRow, startRow, _
+  cellRow, iter, tempVal
+      
+  'On Error Resume Next ' Lazy GoTo Err
+  On Error GoTo 0 ' Resume Next ' Lazy GoTo Err
+  
+    lastRow = Cells(Cells.Rows.Count, "A").End(xlUp).Row
+    numOfRows = WorksheetFunction.CountA(Range("A1:A" & lastRow))
+    startRow = lastRow - numOfRows + 1
+    
+    While iter <= 10
+    ' For iter = 1 To 10 Step 1
+      myRnd = Rnd()
+      cellRow = Int(numOfRows * myRnd) + 1
+      
+      tempVal = Sheets("Sheet1").Range("A" & cellRow).Value & _
+        " " & Sheets("Sheet1").Range("B" & cellRow).Value & _
+        " " & Sheets("Sheet1").Range("C" & cellRow).Value
+      
+      Sheets("Sheet1").Range("D" & iter + 2).Value = cellRow & ": " & tempVal
+      iter = iter + 1
+    Wend
+    ' Next iter
+Exit Sub
+    
+' Random error I can't catch ...
+Err:
+    ' // console.write (Err.Description)
+    Debug.Print Err.Description
+    MsgBox (Err.Description)
+    
+End Sub
+
+0.485844534	0.485844534	135	65.58901206	65	65	66		Jade	Peach	Kaleidoscope	Jade Peach Kaleidoscope
+
+Random # fn  (1-1)	Rand actual value	Max	Rand * Max	Integer Number	Explicit Integer Floor	Add "1" for full range. 		Complex cell ref			As a string
+
+
+' OO Calc - works 
+=RAND()	=E4	135	=F4*G4	=INT(H4)	=ROUNDDOWN(H4,0)	=J4+1		=INDIRECT("A"&$K4)	=INDIRECT("B"&$K4)	=INDIRECT("C"&$K4)	=M4 & " " & N4 & " " &O4
+
+
+' OO Calc - works 
+=RAND()	
+=E4	
+135	
+=F4*G4	
+=INT(H4)	
+=ROUNDDOWN(H4,0)	
+=J4+1		
+=INDIRECT("A"&$K4)	
+=INDIRECT("B"&$K4)	
+=INDIRECT("C"&$K4)	
+=M4 & " " & N4 & " " &O4
+
+
+
+
+= RNDUP(
+ RAND()
+ *
+ (135-1)
+ )
+ +1
+
+CarlaCarrotNostalgia
+
+
+Adrian	Apricot	Serfdom
+Alice	Apple	Kaleidoscope
+Amelia	Artichoke	Eulogy
+Andrew	Arugula	Nostalgia
+Anna	Asparagus	Labyrinth
+Anthony	Avocado	Gossamer
+Ashley	Banana	Cavern
+Audrey	Basil	Euphoria
+Austin	Bean sprouts	Ephemeral
+Benjamin	Beetroot	Scintillating
+Bethany	Bell pepper	Tapestry
+Brandon	Blackberry	Tempestuous
+Brian	Blueberry	Monolith
+Bryan	Broccoli	Enigma
+Caitlin	Brussels sprouts	Alchemy
+Caleb	Butternut squash	Diaphanous
+Cameron	Cantaloupe	Serendipity
+Carla	Carrot	Nostalgia
+Caroline	Cauliflower	Chimera
+Carter	Celeriac	Mellifluous
+Catherine	Celery	Labyrinthine
+Charles	Cherries	Penumbra
+Charlotte	Clementine	Tapestry
+Chase	Coconut	Moniker
+Chelsea	Corn	Seraglio
+Chloe	Cranberry	Tapestry
+Christopher	Cucumber	Euphony
+Ciara	Dates	Melange
+Claire	Dragonfruit	Effervescent
+Cody	Durian	Ephemeral
+Cole	Eggplant	Languid
+Colin	Elderberry	Kaleidoscope
+Connor	Fig	Serfdom
+Corey	Garlic	Tapestry
+Crystal	Ginger	Eulogy
+Daniel	Grapefruit	Nostalgia
+Danielle	Grapes	Cavern
+David	Green beans	Tapestry
+Deborah	Guava	Tapestry
+Derek	Honeydew melon	Enigma
+Diana	Jalapeño	Penumbra
+Dylan	Kale	Languid
+Elizabeth	Kiwi	Chimera
+Emily	Kumquat	Kaleidoscope
+Emma	Leek	Tapestry
+Erin	Lemon	Tapestry
+Ethan	Lime	Labyrinth
+Evan	Litchi	Tapestry
+Evelyn	Loganberry	Nostalgia
+Gabriel	Longan	Tapestry
+Gabrielle	Loquat	Diaphanous
+Georgia	Mango	Tapestry
+Gregory	Mangosteen	Cavern
+Hannah	Melon	Serfdom
+Harrison	Mushrooms	Moniker
+Hayden	Nectarine	Diaphanous
+Heather	Nopal	Effervescent
+Helen	Okra	Labyrinthine
+Holly	Olives	Tapestry
+Ian	Onion	Labyrinth
+Isaac	Orange	Serfdom
+Isabella	Papaya	Euphony
+Jack	Parsnip	Tapestry
+Jacob	Passion fruit	Nostalgia
+Jade	Peach	Kaleidoscope
+Jacqueline	Pear	Tapestry
+James	Peas	Diaphanous
+Jane	Persimmon	Chimera
+Jared	Pineapple	Penumbra
+Jasmine	Plantain	Tapestry
+Jason	Plum	Labyrinth
+Jennifer	Pomegranate	Serfdom
+Jessica	Potato	Melange
+Jillian	Pumpkin	Diaphanous
+John	Radish	Eulogy
+Jonathan	Raspberry	Tapestry
+Jordan	Rhubarb	Cavern
+Joseph	Scallions	Tapestry
+Joshua	Shallots	Labyrinth
+Justin	Snap peas	Diaphanous
+Kayla	Snow peas	Tapestry
+Kelly	Spinach	Serfdom
+Kevin	Squash	Labyrinth
+Kristen	Starfruit	Effervescent
+Kyle	Strawberry	Tapestry
+Laura	Sunflower seeds	Cavern
+Lauren	Sweet potato	Tapestry
+Leah	Tamarind	Languid
+Liam	Tangerine	Ephemeral
+Lily	Tomato	Serfdom
+Lisa	Turnip	Labyrinth
+Logan	Watermelon	Diaphanous
+Lucas	Watercress	Eulogy
+Lucy	Yam	Tapestry
+Luke	Yuca	Nostalgia
+Madison	Apricot	Tapestry
+Maggie	Apple	Tapestry
+Maria	Artichoke	Cavern
+Mark	Arugula	Monolith
+Matthew	Asparagus	Labyrinthine
+Caleb	Avocado	Serfdom
+Cameron	Banana	Kaleidoscope
+Camila	Basil	Eulogy
+Carl	Bean sprouts	Nostalgia
+Caroline	Beetroot	Labyrinth
+Carter	Bell pepper	Gossamer
+Catherine	Blackberry	Cavern
+Cecilia	Blueberry	Euphoria
+Charles	Broccoli	Ephemeral
+Charlotte	Brussels sprouts	Scintillating
+Chase	Butternut squash	Tapestry
+Chloe	Cantaloupe	Tempestuous
+Christopher	Carrot	Monolith
+Claire	Cauliflower	Enigma
+Cody	Celeriac	Alchemy
+Cole	Celery	Diaphanous
+Connor	Cherries	Serendipity
+Cooper	Clementine	Nostalgia
+Corey	Coconut	Chimera
+Crystal	Corn	Mellifluous
+Daniel	Cranberry	Labyrinthine
+Danielle	Cucumber	Penumbra
+David	Dates	Tapestry
+Dean	Dragonfruit	Moniker
+Deborah	Durian	Seraglio
+Derek	Eggplant	Tapestry
+Diana	Elderberry	Euphony
+Dominic	Fig	Melange
+Dylan	Garlic	Effervescent
+Edward	Ginger	Ephemeral
+Eleanor	Grapefruit	Languid
+Elijah	Grapes	Kaleidoscope
+Elizabeth	Green beans	Serfdom
+Emily	Guava	Tapestry
+Emma	Honeydew melon	Eulogy
+Eric	Jalapeño	Nostalgia
+Erin	Kale	Cavern
+Ethan	Kiwi	Tapestry
+Evelyn	Kumquat	Tapestry
+Gabriel	Leek	Enigma
+Gabrielle	Lemon	Penumbra
+Georgia	Lime	Languid
+Grace	Litchi	Chimera
+Haley	Loganberry	Kaleidoscope
+		Tapestry
+		Tapestry
+		Labyrinth
+		Tapestry
+		Nostalgia
+		Tapestry
+		Diaphanous
+		Tapestry
+		Cavern
+		Serfdom
+		Moniker
+		Diaphanous
+		Effervescent
+		Labyrinthine
+		Tapestry
+		Labyrinth
+		Serfdom
+		Euphony
+		Tapestry
+		Nostalgia
+		Kaleidoscope
+		Tapestry
+		Diaphanous
+		Chimera
+		Penumbra
+		Tapestry
+		Labyrinth
+		Serfdom
+		Melange
+		Diaphanous
+		Eulogy
+		Tapestry
+		Cavern
+		Tapestry
+		Labyrinth
+		Diaphanous
+		Tapestry
+		Serfdom
+		Labyrinth
+		Effervescent
+		Tapestry
+		Cavern
+		Tapestry
+		Languid
+		Ephemeral
+		Serfdom
+		Labyrinth
+		Diaphanous
+		Eulogy
+		Tapestry
+		Nostalgia
+		Tapestry
+		Tapestry
+		Cavern
+		Monolith
+		Labyrinthine
+

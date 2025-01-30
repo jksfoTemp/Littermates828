@@ -1,0 +1,56 @@
+
+Option Explicit
+
+Global winPitch As Window
+Global winCatch As Window
+
+Sub Button1_Click()
+    Call Pitch
+End Sub
+
+Sub myToss()
+
+On Error GoTo Ack
+    Call mySet
+    Debug.Print ("Hi.")
+
+    Dim mySample
+    mySample = winPitch.ActiveSheet.Cells(2, 1) 
+    winCatch.ActiveSheet.Cells(2, 1) = mySample 
+
+    Debug.Print (mySample)
+    Exit Sub
+       
+Ack:
+    Debug.Print (Err.Description & Err.Number)
+
+End Sub
+
+Sub mySet()
+   
+    Application.WindowState = xlNormal
+    Application.Top = 25
+    Application.Left = 25
+    Application.Width = 1000
+    Application.Height = 800
+   
+    Set winPitch = Windows("Pitch0.xlsm") ' Workbooks("Pitch0.xlsm")
+    Set winCatch = Windows("Catch0.xlsm")
+   
+    winPitch.Activate
+    winPitch.Width = 400
+    winPitch.Height = 450
+    winPitch.Top = 20
+    winPitch.Left = 20
+    Range("A1").Select
+
+    winCatch.Activate
+    winCatch.Width = 400
+    winCatch.Height = 450
+    winCatch.Top = 40
+    winCatch.Left = 450
+    Range("A1").Select
+
+    winPitch.Activate
+   
+End Sub

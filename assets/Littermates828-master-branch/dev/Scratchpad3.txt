@@ -1,0 +1,344 @@
+
+Zeitgeist - Moving Forward | World Society | Documentary
+
+git add LICENSE
+
+
+git commit -m "Initial project version - too many things going on and partial projects, need a repo, especially for remote work. "
+
+git remote
+git remote add Littermates828 https://github.com/Littermates828/Littermates828
+
+add littermates to cgatgpt
+  is google?
+
+So each month we have a "horsee" day (literally) and a sober fun day. Would anyone be interested in adding a 'service' day (or the like) where we volunteer for something like "Habitat for Humanity" (https://habitatgsf.org/volunteer/) or the like? In this case shifts are 3-5 hours (purrrrfect) but one has to be over 18 (might be an issue?) - at a minimum it gets us out of the grey rooms for a day and also does some good.
+
+@Jaz - I'm all about re-use - I found this empty box in the freezer and repurposed it as a (albeit small) lunch pail but I just can't pull off these colors (peeps have enough doubts about me as it is). You might be able to do it. Want it? If I ask nicely I might even be able to put some of Jack's pistachio nuts in it and leave it with your holiday tree.
+
+<script src="http ://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+@Ronnie & @Gregg - Under the banner "No More Black Bear", there are 40+ lunch places ($20 and under) that deliver to our work place (not sure if Uber Eats) listed here:
+https://sites.google.com/view/littermates828/lunch, links are direct to menu if available. A printable version is available here (actual link embedded in above page): https://docs.google.com/document/d/1B_QThPfrxS5ijMEnqkljSv6V0OiEM70-aB0f4Hp0fRI
+Please bare with me, a Work In Progress as I find the motivation/time/interest.
+
+
+
+https://docs.google.com/document/d/1B_QThPfrxS5ijMEnqkljSv6V0OiEM70-aB0f4Hp0fRI/edit?usp=sharing
+
+https://docs.google.com/document/d/1B_QThPfrxS5ijMEnqkljSv6V0OiEM70-aB0f4Hp0fRI/edit?usp=sharing
+
+
+
+https://www.youtube.com/watch?v=RGOj5yH7evk 18:50
+audible.co
+
+
+WIP 02.03.2024
+
+Rebasing Git - going in too many directions, this is a collection of thoughts
++ For groceries change the clasp settings
+  Note that this is for deploying GAS BE changes to GB for the spread sheet
++ Chores3.html is the current chore list, need to hook up a back end, either a
+  full post back to *.php or set up a php WS
++ Re implement git and github (current task)
++ Fix the carosel images
++ Make a custom curso
++ Add images (gif's and mp3's)
++ Add vector graphics, random shapes moving
++ Bayside projects
+  - Minigolf
+  - Cycle of Recovery
+  - Crossing the Street merit badge
+  - Bingo in HTML
+  - Family Circus
+  - Play with image map hover overs
++ form submit
++ enable / disable person selection
++ record the name and time
++ clear form data
++ persist the information
++ test popups, modals, resource files (JS, css, JQ) popup windows
++ open in new window
+
+
+
+
+AM Kitchen
+  Jack
+
+Upstairs Living
+  Joseph
+
+Downstairs Bath
+  Jazmin
+
+Upstairs Bath
+  Michael
+
+Downstairs Cdommon
+  Ron Jazmin
+
+PM Kitchen
+  josphe/ Michael
+
+
+              <option selected class="optWho" >Jack</option>
+              <option class="optWho" selected>Team</option>
+
+              <option class="optWho" selected">Joseph</option>
+              <option class="optWho" selected>Team</option>
+
+              <option class="optWho" selected >Michael</option>
+              <option class="optWho" selected >Team</option>
+
+              <option class="optWho" selected>Joseph</option>
+              <option class="optWho" selected>Team</option>
+
+              <option class="optWho" selected >Team</option>
+              <option class="optWho" selected>Team</option>
+
+              <option class="optWho">Greg</option>
+              <option class="optWho" selected>Team</option>
+
+              <option class="optWho" selected >Team</option>
+              <option class="optWho" selected>Joseph</option>
+
+              <option class="optWho" selected >Team</option>
+              <option class="optWho" selected>Joseph</option>
+
+              <option class="optWho" selected >Team</option>
+              <option class="optWho" selected>Joseph</option>
+
+              <option class="optWho" selected>Greg</option>
+              <option class="optWho" selected>Team</option>
+
+
+
+
+2ndLine
+jksfo@outlook.com
+RedHorn3y
+415-888-7535
+
+Conversation opened. 1 unread message.
+
+Skip to content
+Using Gmail with screen readers
+2 of 71
+chores 3
+Inbox
+Joseph Kelly
+
+2:22 PM (3 hours ago)
+
+to me, Joseph
+
+<html>
+<head>
+
+<title>
+    Chores - Littermates 828
+</title>
+<link rel="stylesheet" type="text/css" hidden="cssChores.css"></link>
+
+<style>
+:root {
+  --color0: blue;
+  --color1: violet;
+  --color2: lavendar;
+}
+  body {
+    color: var(--color0);
+    text-align: center;
+  }
+  .someClass {
+    color: var(--color1);
+  }
+  #main {
+    color: var(--color2);
+  }
+
+</style>
+<script lang="javascript" >
+/*
+function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+*/
+
+function myChores(ick) {
+    /* var x = document.getElementById("myDIV"); */
+    var x = document.getElementById(ick);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+    }
+    </script>
+
+</head>
+<body>
+<p />
+  <input type="button" value="Go to " onclick="alert('Zoo');" />
+
+  <div id="main">
+    <div id="title">
+      828 Weekly Chores Assignment
+    </div>
+
+  </div>
+
+
+<p />
+<hr />
+<table width="660px" border="1">
+    <tr>
+        <td colspan="3">
+task list
+        </td >
+    </tr>
+    <tr onclick="myChores('d1'); ">
+        <td >  Ron  </td >
+        <td >  Kitchen  </td >
+        <td ><div id="d1" >And the recycling<br />Trash<br />Floors</div></td >
+    </tr>
+    <tr onclick="myChores('d2'); ">
+        <td >  Tom  </td >
+        <td >  Dungeon  </td >
+        <td ><div id="d2" >Time for bed<br />and rest</div></td >
+    </tr>
+    <tr onclick="myChores('d3'); ">
+        <td >  Mary  </td >
+        <td >  Prayer  </td >
+        <td ><div id="d3" >Worship<br />while<br />you<br />can</div></td >
+    </tr>
+    <tr onclick="myChores('d4'); ">
+        <td >  Joan  </td >
+        <td >  Bath </td >
+        <td ><div id="d4" >Party on Wayne<br />Trash paper<br />Tomorrow</div></td >
+    </tr>
+    <tr onclick="myChores('d4'); ">
+        <td >  Joan  </td >
+        <td >  Bath </td >
+        <td ><div id="d4" >Party on Wayne<br />Trash paper<br />Tomorrow</div></td >
+    </tr>
+    <tr onclick="myChores('d4'); ">
+        <td >  Joan  </td >
+        <td >  Bath </td >
+        <td ><div id="d4" >Party on Wayne<br />Trash paper<br />Tomorrow</div></td >
+    </tr>
+</table>
+
+<div>
+
+Daily Chore - Resident
+
+  Kitchen AM: ~0800
+  * Empty dishwasher and put any dirty dishes into the dishwater
+  * Empty dish rack
+  * Clean the sink and dishes
+  * Load dishwasher if needed
+  * Check/clean sufaces and put away any cleaningware
+  * Start pot of coffee for the house, turn heating element before leaving for the day
+  * Take out the the gargage if full, replace trash bag
+  * Sweep, mop if needed
+  * Tuesday/Friday: Bring garbage/recycling cans back in from the street
+
+  Kitchen PM: ~2200
+  * Empty dish rack
+  * Clean the sink and dishes
+  * Load and start dishwasher
+  * Check/clean sufaces and put away any cleaningware
+  * Check/clean microwave, stove, oven
+  * Prepare pot of coffee for the house (1.5-2 large scoops for full carafe)
+  * Take out the the gargage if full and replace trash bag
+  * Check/empty recycling
+  * Sweep, mop if needed
+  * Monday/Thursday: Take garbage/recycling out to curb
+
+  Kitchen Weekly
+  * Clean dishwasher filters
+  * Defrost ice maker box if needed/frozen
+  * Check/clean microwave, stove, oven, refrigerator and other apliances interior and surfaces
+  * Inventory refrigerator contents
+  * Replace/wash kitchen towels and rugs
+  * Sweep/mop floor, moving cabinets
+
+  Upstairs Common Areas ()
+  * Wipe down tables and spray couch with fabric cleaner at least 1 time per week
+  * Wipe doors/handles, marks on walls, baseboards, etc.
+  * Dust TV and other appliances, * Wipe doors/handles, marks on walls, baseboards, etc.
+  * Remove any personal belongings and place in “Lost and Found” (first floor hallway communications area) including packages
+  * Break down any boxes left from packages and recycle or throw away cardboard
+  * Organize electronics and miscellaneous items
+  * Sweep and mop/vacuum living room and hallways
+  * Empty trash and replace trash bag
+  * Sweep and mop/vacuum rooms and hallways (Weekly / as needed)
+
+  Upstairs Bathroom
+  * Replace bath mat and towels when dirty - place in laundry room
+  * Wipe/clean mirror, sink, toilet seat, handles
+  * Organize towels / toothbrushes / deododrant, etc.
+  * Scrub toilet with toilet brush
+  * Empty trash and replace trash bag
+
+  Downstairs Common Areas (Recreation and Laundry Rooms, Hallway)
+  * Wipe down tables and spray couch with fabric cleaner at least 1 time per week
+  * Wipe doors/handles, marks on walls, baseboards, etc.
+  * Dust TV and other appliances, * Wipe doors/handles, marks on walls, baseboards, etc.
+  * Remove any personal belongings and place in “Lost and Found” (first floor hallway communications area) including packages
+  * Organize delectronics and miscellaneous items
+  * Empty trash
+  * Sweep and mop/vacuum roomz and hallways (Weekly)
+
+  Downstairs Bathroom
+  * Replace bath mat and towels when dirty - place in laundry room
+  * Wipe/clean mirror, sink, toilet seat, handles
+  * Organize towels / toothbrushes / deododrant, etc.
+  * Scrub toilet with toilet brush
+  * Empty trash and replace trash bag
+
+  Linens and Stairs
+  * (One or two loads per week / as needed)
+  * Wash and dry all house towels, rags, and bath mats placled in launddry room
+  * Fold and organize linens; place in laundry room throughout the week
+  * Vacuum stairs
+
+Please write the time you have completed chore on the board
+*** Neglecting to write your time means the chore is considered not done ***
+Also, help each other when needed!
+
+
+######################################
+
+Jack
+Joseph
+Michael
+Ron
+Ronnie
+Cisco
+Gregg
+Not Me
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
+
+

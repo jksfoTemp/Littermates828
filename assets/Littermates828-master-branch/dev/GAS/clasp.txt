@@ -1,0 +1,50 @@
+
+
+// cd C:\Users\jksfo\OneDrive\Bayside\Computers\Code\GAS
+
+// https://github.com/gscharf94/Clasp-Basics-for-Reddit 
+
+// Working directory 
+C:\Users\jksfo\OneDrive\Bayside\Computers\Code\GAS\
+
+// https://sites.google.com/d/14GEUsJ8TADDwVUisgKfLgcW3QDwC-Ln7/p/1R0Zw-fymMbUE3CPTY3vovTNtCpu62aL2/edit 
+
+// ShoppingList0 
+
+clasp create ShoppingList0  
+
+// for my project 
+https://script.google.com/u/0/home/projects/
+	1ttB1YsWmoKa1fibChrA1KhnNEBRY9KCXqlNEhsYHydxA39HgDKiSVoDt/edit
+
+// for demo project 
+{"scriptId":"1nQOoPmYEzAufTEMePZMOpsqvH1mm3cspyt77WFZ0V-IzR3wAt7ZwVA7F","rootDir":"C:\\Users\\jksfo\\OneDrive\\Bayside\\Computers\\Code\\GAS-Demo"}
+
+https://github.com/gscharf94/Clasp-Basics-for-Reddit
+
+Cloning a project that already exists
+
+Ok, so it's pretty simple. First, get the script ID by opening the script editor up in a web browser and finding it in the URL. Next, create a text file called ".clasp.json" in the directory you want the code to be copied into. Then in that file copy paste this text, replacing the "SCRIPTID" with your actual script id.
+
+{"scriptId":"SCRIPTID"}
+
+Then, with a command line set to that same directory, just type in "clasp pull". All the files from your GAS project will be downloaded into that directory, and whenever you type in "clasp push" the same file will be updated.
+
+https://developers.google.com/apps-script/guides/clasp
+
+Login
+
+This command logs in and authorizes management of your Google account's Apps Script projects. Once it is run, you are asked to sign into a Google account where your Apps Script projects are stored.
+
+clasp login
+
+Logout
+
+This command logs out of the command line tool. You must re-login using clasp login to re-authenticate with Google before continuing to use clasp.
+
+clasp logout
+
+
+ onEdit(e)
+ 
+ 

@@ -1,0 +1,682 @@
+<html>
+
+<head>
+  <title>
+    Chores3.html - Littermates 828
+  </title>
+  <!-- link rel="stylesheet" type="text/css" hidden="../css/cssChores.css"> -->
+  <link rel="stylesheet" type="text/css" url="../css/cssChores.css">
+  </link>
+  <link rel="stylesheet" type="text/css" url="../css/cssResParalell.css">
+  </link>
+  <link rel="stylesheet" type="text/css" url="cssResLocal.css">
+  </link>
+  <style>
+    :root {
+      --color0: blue;
+      --color1: violet;
+      --color2: lavendar;
+      --color3: dark-grey;
+      --color4: green;
+      --color5: light-grey;
+      --color6: pink;
+      --color7: ghostwhite;
+    }
+
+    body {
+      color: var(--color0);
+    }
+
+    td {
+      border-bottom: 2px dashed var(--color3);
+      border-spacing: 100px;
+    }
+
+    .tMain {
+      border: dotted 1px blue;
+    }
+
+    .tdName {
+      height: 3.5em;
+      /* border: 2px dashed var(--color1); */
+    }
+
+    .tdAnchorTop {
+      vertical-align: top;
+    }
+
+    .someSpace {
+      /* border: 2px solid green; */
+      border-spacing: 80px;
+    }
+
+    .someClass {
+      color: var(--color1);
+    }
+
+    .dCont {
+      color: var(--color1);
+    }
+
+    .main {
+      border-bottom: dotted 1px blue;
+      color: var(--color2);
+      width: 100%;
+      text-align: center;
+      margin: auto;
+    }
+
+    .col1 {
+      width: 10%;
+      /* border: solid 3px var(--color6)"; */
+    }
+
+    .col2 {
+      width: 20%;
+      border: 1px;
+    }
+
+    .col3 {
+      width: 70%;
+      border: 3px;
+      text-align: left;
+    }
+
+    .intro,
+    .detail {
+      text-align: left;
+    }
+
+    .intro {
+      display: inline-block;
+      cursor: url(broomCursor3.tga), help;
+    }
+
+    .detail {
+      display: none;
+      color: var(--color3);
+      width: 100%;
+    }
+
+    .expandLink {
+      text-decoration: underline wavy var(--color0);
+      text-underline-offset: 0.3em;
+    }
+
+    .hrSub {
+      color: var(--color5);
+      width: 100%;
+    }
+
+    .spacer2px {
+      height: 2px;
+      /* background-color: red; */
+      display: block;
+    }
+
+    .selWho,
+    optgroup {
+      font-size: 10pt;
+      /* small; */
+      color: var(--color3);
+      background-color: var(--color7);
+      /* ghostwhite */
+      ;
+
+      border-radius: 10px;
+      height: 1.8em;
+    }
+
+    .optWho {
+      font-size: 10pt;
+      color: teal;
+    }
+
+    #trBodyTitle {
+      display: none;
+      column-span: 3;
+    }
+
+    #main {
+      color: var(--color0);
+    }
+
+    #wrapper {
+      width: 90%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #who1 {
+      background-color: var(--color7);
+    }
+
+    #who2 {
+      background-color: var(--color7);
+    }
+  </style>
+
+  <script type="text/javascript" src="jsResLocal.js"></script>
+  <script type="text/javascript" src="../js/jsResParalell.js"></script>
+
+  <script lang="javascript">
+
+    //  document.getElementById("myForm").reset(); 
+
+    function mySetup() {
+      // myMsg('ack'); 
+      var a = document.getElementById("spDate");
+      var out = "";
+      const currentDate = new Date();
+
+      out = currentDate.getFullYear() + '.' +
+        currentDate.getMonth() + '.' +
+        currentDate.getDay() + ' ' +
+        currentDate.getHours() + ':' +
+        currentDate.getMinutes();
+
+      a.innerHTML = out; /* currentDate.getDay();  */
+    }
+
+    function myMsg(t) {
+      var m = document.getElementById("imsg").innerHTML = t;
+    }
+
+    function noBoldMe(foo) {
+      document.getElementById(foo).style.fontStyle = "normal";
+    }
+
+    function boldMe(foo) {
+      document.getElementById(foo).style.fontStyle = "italic";
+    }
+
+    function myChores(nHide, nShow) {
+      var oHide = document.getElementById(nHide);
+      var oShow = document.getElementById(nShow);
+      // myMsg(' | nHide: ' + nHide + ' - oHide: ' + oHide + ', nShow: ' + nShow + ' - ' + oShow + ';   ');
+      oHide.style.display = "none";
+      oShow.style.display = "inline-block";
+    }
+
+  </script>
+</head>
+
+<body onload="mySetup();">
+  <p />
+  <div id="wrapper" class="main">
+    <div id="control" class="notmain">
+      <div id="testing" style="display: inline-block; width: 49%; text-align: left; border: 1px solid yellow;">
+        <input type="button" value="Testing " onclick=" myMsg('Bark.');" />
+        <input type="button" value="Window Float " onclick=" myMsg('Window Float');" />
+        <input type="button" value="New Window (Float?)" onclick=" myMsg('New Window (Float?)');" />
+      </div>
+      <div id="print" style="display: inline-block; width: 49%; text-align: right; border: 1px solid yellow;">
+        <span id="spResLocal">Resource Local</span>
+        <span id="spResParalell">Resource Paralell</span>
+        <input type="button" value="Printable "
+          onclick=" myMsg('Show a Printable pop-up. Need to test this deployed.');" />
+      </div>
+    </div>
+    <p />
+    <div id="head" class="notmain">
+      <div id="title">
+        828 Weekly Chores Assignment
+      </div>
+    </div>
+    <p />
+    <hr />
+    <form action="/Chores3.php" Chores3.html>
+      <table id="tMain" class="main">
+        <!-- Header -->
+        <tr id="tr0" class="">
+          <th class="col1"></th>
+          <th class="col2"></th>
+          <th class="col3 tdAnchorTop"></th>
+        </tr>
+        <!-- Caption -->
+        <tr>
+          <td id="trBodyTitle">
+            Task List
+          </td>
+        </tr>
+        <!-- 1 Kitchen AM -->
+        <tr id="tr1">
+          <td id="tr1td1" class="tdName tdAnchorTop">
+            <select id="who1A" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+            <span class="spacer2px"></span>
+            <select id="who1B" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+          </td>
+          <td id="tr1td2" class="tdAnchorTop" class="tdAnchorTop">Kitchen AM
+          </td>
+          <td id="tr1td3" class="col3 tdAnchorTop">
+            <div id="tr1td3D0" class="intro expandLink" onclick="myChores('tr1td3D0','tr1td3D1'); "
+              onmouseover="boldMe(this.id);" onmouseleave="noBoldMe(this.id);">
+              Empty dishwasher and put away clean dishes ...
+            </div>
+            <div id="tr1td3D1" class="detail someSpace" onclick="myChores('tr1td3D1', 'tr1td3D0'); ">
+              <LI>Empty dishwasher and put away clean dishes</LI>
+              <LI>Empty dish rack and put away clean dishes</LI>
+              <LI>Clean the sink and dishes</LI>
+              <LI>Load dishwasher if needed</LI>
+              <LI>Check/clean sufaces and put away any cleaningware</LI>
+              <LI>Start pot of coffee for the house, turn OFF heating element before leaving for the day</LI>
+              <LI>Take out the the gargage if full and replace trash bag</LI>
+              <LI>Sweep, mop if needed</LI>
+              <LI>Tuesday/Friday: Bring garbage/recycling cans back in from the street</LI>
+              <hr class="hrSub" />
+            </div>
+          </td>
+        </tr>
+        <!-- 2 Kitchen PM -->
+        <tr id="tr2">
+          <td id="tr2td1" class="tdName tdAnchorTop"><!-- Joseph/Michael -->
+            <select id="who2A" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+            <span class="spacer2px"></span>
+            <select id="who2B" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+          </td>
+          <td id="tr2td2" class="tdAnchorTop" class="tdAnchorTop">Kitchen PM
+          </td>
+          <td id="tr2td3" class="col3 tdAnchorTop">
+            <div id="tr2td3D0" class="intro expandLink" onclick="myChores('tr2td3D0','tr2td3D1'); "
+              onmouseover="boldMe(this.id);" onmouseleave="noBoldMe(this.id);">
+              Empty dishwasher and put any dirty dishes into the dishwater; clean the sink ...
+            </div>
+            <div id="tr2td3D1" class="detail someSpace" onclick="myChores('tr2td3D1', 'tr2td3D0'); ">
+              <LI>Empty dishwasher and put any dirty dishes into the dishwater; clean the sink</LI>
+              <LI>Empty dish rack and put away clean dishes</LI>
+              <LI>Clean the sink and dishes</LI>
+              <LI>Load and run dishwasher if needed</LI>
+              <LI>Check/clean microwave, stove, oven</LI>
+              <LI>Prepare pot of coffee for the house (1.5-2 large scoops for full carafe)</LI>
+              <LI>Take out the the gargage if full and replace trash bag</LI>
+              <LI>Check/empty recycling</LI>
+              <LI>Sweep, mop if needed</LI>
+              <LI>Monday/Thursday: Take garbage/recycling out to curb </LI>
+              <hr class="hrSub" />
+            </div>
+          </td>
+        </tr>
+        <!-- 3 Kitchen Weekly -->
+        <tr id="tr3">
+          <td id="tr3td1" class="tdName tdAnchorTop">
+            <select id="who3A" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+            <span class="spacer2px"></span>
+            <select id="who3B" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+          </td>
+          <td id="tr3td2" class="tdAnchorTop">Kitchen Weekly
+          </td>
+          <td id="tr3td3" class="col3 tdAnchorTop">
+            <div id="tr3td3D0" class="intro expandLink" onclick="myChores('tr3td3D0','tr3td3D1'); "
+              onmouseover="boldMe(this.id);" onmouseleave="noBoldMe(this.id);">
+              Clean dishwasher filters ...
+            </div>
+            <div id="tr3td3D1" class="detail someSpace" onclick="myChores('tr3td3D1', 'tr3td3D0'); ">
+              <LI>Clean dishwasher filters</li>
+              <li>Defrost ice maker box if needed/frozen</li>
+              <li>Check/clean microwave, stove, oven, refrigerator and other apliances interior and surfaces</li>
+              <li>Inventory refrigerator contents</li>
+              <li>Replace/wash kitchen towels and rugs</li>
+              <li>Sweep/mop floor, moving cabinets</li>
+              <hr class="hrSub" />
+            </div>
+          </td>
+        </tr>
+        <!-- 4 Upstairs Common Areas -->
+        <tr id="tr4">
+          <td id="tr4td1" class="tdName tdAnchorTop">
+            <select id="who4A" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+            <span class="spacer2px"></span>
+            <select id="who4B" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho" selected>Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+          </td>
+          <td id="tr4td2" class="tdAnchorTop">Upstairs Common Areas
+          </td>
+          <td id="tr4td3" class="col3 tdAnchorTop">
+            <div id="tr4td3D0" class="intro expandLink" onclick="myChores('tr4td3D0','tr4td3D1'); "
+              onmouseover="boldMe(this.id);" onmouseleave="noBoldMe(this.id);">
+              Wipe down tables and spray couch with fabric cleaner at least 1 time per week ...
+              <!-- 
+              <span style="display: block; height: 7px;"></span>
+              <span style="display: block; ">(Recreation and Dining Rooms, Hallway)</span>
+            -->
+            </div>
+            <div id="tr4td3D1" class="detail someSpace" onclick="myChores('tr4td3D1', 'tr4td3D0'); ">
+              <LI>Wipe down tables and spray couch with fabric cleaner at least 1 time per week</LI>
+              <LI>Wipe doors/handles, marks on walls, baseboards, etc.</LI>
+              <LI>Dust TV and other appliances,
+              <LI>Wipe doors/handles, marks on walls, baseboards, etc.</LI>
+              <LI>Remove any personal belongings and place in “Lost and Found” <br />(first floor hallway communications
+                area)
+                including packages</LI>
+              <LI>Break down any boxes left from packages and recycle or throw away cardboard</LI>
+              <LI>Organize electronics and miscellaneous items</LI>
+              <LI>Sweep and mop/vacuum living room and hallways</LI>
+              <LI>Empty trash and replace trash bag</LI>
+              <LI>Sweep and mop/vacuum rooms and hallways (Weekly / as needed)</LI>
+              (Recreation and Dining Rooms, Hallway)
+              <hr class="hrSub" />
+            </div>
+          </td>
+        </tr>
+        <!-- 5 Upstairs Bathroom -->
+        <tr id="tr5">
+          <td id="tr5td1" class="tdName tdAnchorTop">
+            <select id="who5A" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+            <span class="spacer2px"></span>
+            <select id="who5B" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+          </td>
+          <td id="tr5td2" class="tdAnchorTop">Upstairs Bathroom
+          </td>
+          <td id="tr5td3" class="col3 tdAnchorTop">
+            <div id="tr5td3D0" class="intro expandLink" onclick="myChores('tr5td3D0','tr5td3D1'); "
+              onmouseover="boldMe(this.id);" onmouseleave="noBoldMe(this.id);">
+              Replace bath mat and towels when dirty - place in laundry room ...
+            </div>
+            <div id="tr5td3D1" class="detail someSpace" onclick="myChores('tr5td3D1', 'tr5td3D0'); ">
+              <LI>Replace bath mat and towels when dirty - place in laundry room</LI>
+              <LI>Wipe/clean mirror, sink, toilet seat, handles</LI>
+              <LI>Organize towels / toothbrushes / deododrant, etc.</LI>
+              <LI>Scrub toilet with toilet brush</LI>
+              <LI>Empty trash and replace trash bag</LI>
+              <hr class="hrSub" />
+            </div>
+          </td>
+        </tr>
+        <!-- 6 Downstairs Common Areas -->
+        <tr id="tr6">
+          <td id="tr6td1" class="tdName tdAnchorTop">
+            <select id="who6A" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho">Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+            <span class="spacer2px"></span>
+            <select id="who6B" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+          </td>
+          <td id="tr6td2" class="tdAnchorTop">Downstairs Common Areas
+          </td>
+          <td id="tr6td3" class="col3 tdAnchorTop">
+            <div id="tr6td3D0" class="intro expandLink" onclick="myChores('tr6td3D0','tr6td3D1'); "
+              onmouseover="boldMe(this.id);" onmouseleave="noBoldMe(this.id);">
+              Wipe down tables and spray couch with fabric cleaner at least 1 time per week ...
+              <!-- 
+              <span style="display: block; height: 7px;"></span>
+              <span style="display: block; ">(Recreation and Laundry Rooms, Hallway)</span>
+            -->
+            </div>
+            <div id="tr6td3D1" class="detail someSpace" onclick="myChores('tr6td3D1', 'tr6td3D0'); ">
+              <LI>Wipe down tables and spray couch with fabric cleaner at least 1 time per week</LI>
+              <LI>Wipe doors/handles, marks on walls, baseboards, etc.</LI>
+              <LI>Dust TV and other appliances,
+              <LI>Wipe doors/handles, marks on walls, baseboards, etc.</LI>
+              <LI>Remove any personal belongings and place in “Lost and Found” <br />(first floor hallway communications
+                area)
+                including packages</LI>
+              <LI>Organize delectronics and miscellaneous items</LI>
+              <LI>Empty trash</LI>
+              <LI>Sweep and mop/vacuum roomz and hallways (Weekly)</LI>
+              (Recreation and Laundry Rooms, Hallway)
+              <hr class="hrSub" />
+            </div>
+          </td>
+        </tr>
+        <!-- 7 Downstairs Bathroom -->
+        <tr id="tr7">
+          <td id="tr7td1" class="tdName tdAnchorTop">
+            <select id="who7A" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+            <span class="spacer2px"></span>
+            <select id="who7B" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho" selected>Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+          </td>
+          <td id="tr7td2" class="tdAnchorTop">Downstairs Bathroom
+          </td>
+          <td id="tr7td3" class="col3 tdAnchorTop">
+            <div id="tr7td3D0" class="intro expandLink" onclick="myChores('tr7td3D0','tr7td3D1'); "
+              onmouseover="boldMe(this.id);" onmouseleave="noBoldMe(this.id);">
+              Replace bath mat and towels when dirty, place in laundry room ...
+            </div>
+            <div id="tr7td3D1" class="detail someSpace" onclick="myChores('tr7td3D1', 'tr7td3D0'); ">
+              <LI>Replace bath mat and towels when dirty, place in laundry room</LI>
+              <LI>Wipe/clean mirror, sink, toilet seat, handles</LI>
+              <LI>Organize towels / toothbrushes / deododrant, etc.</LI>
+              <LI>Scrub toilet with toilet brush</LI>
+              <LI>Empty trash and replace trash bag</LI>
+              <hr class="hrSub" />
+            </div>
+          </td>
+        </tr>
+        <!-- 8 Linens and Stairs -->
+        <tr id="tr8">
+          <td id="tr8td1" class="tdName tdAnchorTop">
+            <select id="who8A" class="selWho">
+              <optgroup>
+                <option class="optWho">Select</option>
+                <option class="optWho">Cisco</option>
+                <option class="optWho">Greg</option>
+                <option class="optWho">Jack</option>
+                <option class="optWho">Joseph</option>
+                <option class="optWho">Michael</option>
+                <option class="optWho">Ron</option>
+                <option class="optWho">Ronnie</option>
+                <option class="optWho" selected>Team</option>
+              </optgroup>
+            </select>
+            <span class="spBacer2px"></span>
+            <select id="who8B" class="selWho">
+              <optgroup> <!-- TODO c/p this to all -->
+                <option class="optWho" name="whoOpt8B" value="Select">Select</option>
+                <option class="optWho" name="whoOpt8B" value="Cisco">Cisco</option>
+                <option class="optWho" name="whoOpt8B" value="Greg">Greg</option>
+                <option class="optWho" name="whoOpt8B" value="Jack">Jack</option>
+                <option class="optWho" name="whoOpt8B" value="Joseph">Joseph</option>
+                <option class="optWho" name="whoOpt8B" value="Michael">Michael</option>
+                <option class="optWho" name="whoOpt8B" value="Ron">Ron</option>
+                <option class="optWho" name="whoOpt8B" value="Ronnie">Ronnie</option>
+                <option class="optWho" name="whoOpt8B" value="Team"selected>Team</option>
+              </optgroup>
+            </select>
+          </td>
+          <td id="tr8td2" class="tdAnchorTop">Linens and Stairs
+          </td>
+          <td id="tr8td3" class="col3 tdAnchorTop">
+            <div id="tr8td3D0" class="intro expandLink" onclick="myChores('tr8td3D0','tr8td3D1'); "
+              onmouseover="boldMe(this.id);" onmouseleave="noBoldMe(this.id);">
+              One or two loads per week / as needed ...
+            </div>
+            <div id="tr8td3D1" class="detail someSpace" onclick="myChores('tr8td3D1', 'tr8td3D0'); ">
+              <LI>One or two loads per week / as needed</LI>
+              <LI>Wash and dry all house towels, rags, and bath mats placled in laundry room</LI>
+              <LI>Fold and organize linens; place in laundry room throughout the week</LI>
+              <LI>Vacuum stairs</LI>
+              <hr class="hrSub" />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <br />
+            Please write the time you have completed chore on the board<br />
+            *** Neglecting to write your time means the chore is considered not done ***<br />
+            Also, help each other when needed!
+          </td>
+        </tr>
+        <tr> <input id="submitChores" type="submit" url value="submit" >Submits</input></tr>
+      </table>
+    </form>
+    <div>
+      &nbsp;</p>
+      <span id="spDate" style="display: inline-block;">/date/</span>
+      &nbsp;</p>
+      printable z-index
+      &nbsp;</p>
+      style="width: 60%;"
+    </div>
+    <div>
+      &nbsp;</p>
+      <span id="imsg" style="display: inline-block;">fsfd</span>
+    </div>
+  </div>
+</body>
+
+</html>

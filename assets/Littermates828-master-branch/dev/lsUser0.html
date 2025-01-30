@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <title>
+      Littermates828 - Hello  
+    </title>
+    <link rel="stylesheet" type="text/css" href="./css/hello.css">
+    </link>
+    <script lang="javascript" src="./js/hello.js"></script>
+    <script lang="javascript" >
+      function myChores(ick) {
+          var x = document.getElementById(ick);
+          if (x.style.display === "none") {
+              x.style.display = "block";
+          } else {
+              x.style.display = "none";
+          }
+      } 
+      
+      function fromRecord (arg) {
+        // get entry and local storage kvp, keep key, just clear value 
+        var is; 
+        is = document.getElementById("uName");
+        writeWhat("Recorded '" + is.value + "'");
+      }
+
+      function fromClear (arg) {
+        // clear entry and local storage kvp, keep key, just clear value 
+        var was, wasVal; 
+        was = document.getElementById("uName");
+        wasVal = was.value; 
+        was.value = ""; 
+        writeWhat("Cleared '" + wasVal + "'");
+      }
+
+      function writeWhat (arg) {
+        var msg;
+        msg = document.getElementById("what"); 
+        msg.innerText = arg; 
+        localStorage.userName = "rdegges";
+        var foo = "foobar";
+        localStorage[foo] = "Polly wanna cracker";
+        localStorage["someVal"] = arg;
+
+      } 
+    </script>
+    <style>
+      :root {
+        --blue: #1e90ff;
+        --white: #ffffff;
+      }
+
+      html, body {
+        background-color: var(--white);; 
+        height: 100%;
+        width: 100%;  
+        text-align: center; 
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      html {
+        display: table;
+        margin: auto;
+      }
+      body {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      span {
+        display: inline-block;
+      }
+      #main {
+        border: 1px solid blue; 
+        writing-mode: horizontal-tb;
+        direction: ltr;
+        margin: auto;
+        height: 200px;
+        width: 300px;
+      }
+      #container {
+        background-color: var(--blue);
+        border: 2px solid pink;
+        width: 299px; 
+        height: 199px;
+        /*position: relative;**/
+      }
+      .sm{
+        /* color: green;  */ 
+        font-size: small; 
+      }
+      .note {
+        margin-left: 0px;
+      }
+      .action, .response {
+        border-bottom: 1px solid rebeccapurple;
+      }
+      .action {
+        width: 80px;
+      }
+      .response {
+        width: 180px;
+      }
+      .enter {
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-bottom: 1px solid black;
+        /*color: green; */
+        background-color: var(--blue);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- and to think I could have just used a hidden  -->
+    <div id="main" >
+      <div id="container">
+        <p >
+          <span class=""></span>
+          Please enter your name 
+        </p>
+        <input id="uName" type="text" class="action enter" onclick=" /* alert('Text'); */" onfocusout="" >
+        </input>
+        <p></p>
+        <span class="action" onclick="/*alert('Record');*/ fromRecord('Record '); ">Record</span>
+        <span class="action" onclick="/*alert('Clear');*/ fromClear('Clear ');">Clear</span> <p></p> 
+        <span id="what" class="response" onclick="/*alert('Record'); */">-</span>
+        <p></p>
+        <div class="sm">
+          Please note that this is not a security measure <br/>
+          rather it is used for convenience. 
+        </div>
+      </div>
+      <p></p> 
+      Dump local storage <br/>
+      <div id="ls">
+        ls
+      </div>   
+      <p></p> 
+      Dump client values <br/>
+      <div id="cv">
+        cv
+      </div>   
+    </div>
+  </body>
+</html>

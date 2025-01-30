@@ -1,0 +1,269 @@
+<html>
+
+<head>
+  <title>
+    All is Well - Littermates 828
+  </title>
+  <!-- link rel="stylesheet" type="text/css" hidden="../css/cssChores.css"> -->
+  <link rel="stylesheet" type="text/css" url="../css/cssChores.css">
+  </link>
+  <link rel="stylesheet" type="text/css" url="../css/cssResParalell.css">
+  </link>
+  <link rel="stylesheet" type="text/css" url="cssResLocal.css">
+  </link>
+  <style>
+    :root {
+      --color0: blue;
+      --color1: violet;
+      --color2: lavendar;
+      --color3: dark-grey;
+      --color4: green;
+      --color5: light-grey;
+      --color6: pink;
+      --color7: ghostwhite;
+    }
+
+    body {
+      color: var(--color0);
+    }
+
+    td {
+      border-bottom: 2px dashed var(--color3);
+      border-spacing: 100px;
+    }
+
+    .tMain {
+      border: dotted 1px blue;
+    }
+
+    .tdName {
+      height: 3.5em;
+      /* border: 2px dashed var(--color1); */
+    }
+
+    .tdAnchorTop {
+      vertical-align: top;
+    }
+
+    .someSpace {
+      /* border: 2px solid green; */
+      border-spacing: 80px;
+    }
+
+    .someClass {
+      color: var(--color1);
+    }
+
+    .dCont {
+      color: var(--color1);
+    }
+
+    .main {
+      border-bottom: dotted 1px blue;
+      color: var(--color2);
+      width: 100%;
+      text-align: center;
+      margin: auto;
+    }
+
+    .col1 {
+      width: 10%;
+      /* border: solid 3px var(--color6)"; */
+    }
+
+    .col2 {
+      width: 20%;
+      border: 1px;
+    }
+
+    .col3 {
+      width: 70%;
+      border: 3px;
+      text-align: left;
+    }
+
+    .intro,
+    .detail {
+      text-align: left;
+    }
+
+    .intro {
+      display: inline-block;
+      cursor: url(broomCursor3.tga), help;
+    }
+
+    .detail {
+      display: none;
+      color: var(--color3);
+      width: 100%;
+    }
+
+    .expandLink {
+      text-decoration: underline wavy var(--color0);
+      text-underline-offset: 0.3em;
+    }
+
+    .hrSub {
+      color: var(--color5);
+      width: 100%;
+    }
+
+    .spacer2px {
+      height: 2px;
+      /* background-color: red; */
+      display: block;
+    }
+
+    .selWho,
+    optgroup {
+      font-size: 10pt;
+      /* small; */
+      color: var(--color3);
+      background-color: var(--color7);
+      /* ghostwhite */
+      ;
+
+      border-radius: 10px;
+      height: 1.8em;
+    }
+
+    .optWho {
+      font-size: 10pt;
+      color: teal;
+    }
+
+    #trBodyTitle {
+      display: none;
+      column-span: 3;
+    }
+
+    #main {
+      color: var(--color0);
+    }
+
+    #wrapper {
+      width: 90%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #who1 {
+      background-color: var(--color7);
+    }
+
+    #who2 {
+      background-color: var(--color7);
+    }
+
+    #tgtImgOuter {
+      border: solid 2px orange; 
+      width: 450px; 
+      height: 450px; 
+      position: relative;
+
+    }
+
+    #tgtImg0 {
+      border: dashed 1px green; 
+      /* width: 400px;  */
+      /* height: 400px; */ 
+      position: absolute; 
+      top: 25px; 
+      left: 25px; 
+      z-index: 30;
+    }
+
+    #tgtImg1 {
+      border: dotted 2px pink; 
+      width: 400px; 
+      height: 400px; 
+      position: absolute; 
+      top: 235px; 
+      left: 365px; 
+      z-index: 20;
+    }
+
+  </style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <script type="text/javascript" src="jsResLocal.js"></script>
+  <script type="text/javascript" src="../js/jsResParalell.js"></script>
+
+  <script lang="javascript">
+
+    //  document.getElementById("myForm").reset(); 
+
+    function mySetup() {
+      // myMsg('ack'); 
+      var a = document.getElementById("spDate");
+      var out = "";
+      const currentDate = new Date();
+
+      out = currentDate.getFullYear() + '.' +
+        currentDate.getMonth() + '.' +
+        currentDate.getDay() + ' ' +
+        currentDate.getHours() + ':' +
+        currentDate.getMinutes();
+
+      a.innerHTML = out; /* currentDate.getDay();  */
+    }
+
+    function myMsg(t) {
+      var m = document.getElementById("imsg").innerHTML = t;
+    }
+
+    function noBoldMe(foo) {
+      document.getElementById(foo).style.fontStyle = "normal";
+    }
+
+    function boldMe(foo) {
+      document.getElementById(foo).style.fontStyle = "italic";
+    }
+
+    function myChores(nHide, nShow) {
+      var oHide = document.getElementById(nHide);
+      var oShow = document.getElementById(nShow);
+      // myMsg(' | nHide: ' + nHide + ' - oHide: ' + oHide + ', nShow: ' + nShow + ' - ' + oShow + ';   ');
+      oHide.style.display = "none";
+      oShow.style.display = "inline-block";
+    }
+
+  </script>
+</head>
+
+<body onload="mySetup();">
+  <p />
+  <div id="wrapper" class="main">
+    <p />
+    <div id="head" class="notmain">
+      <div id="title">
+        Goofey Title
+      </div>
+    </div>
+    <p />
+    <hr />
+    <div id="sandbox" style="border: solid 2px black;">
+      &nbsp;</p>
+      <div id="tgtImgOuter" class="main w3-spin" > <!-- style="" -->
+        <div id="tgtImg0"  > <!-- style="" -->
+          <img src="./img/AllIsWell3.jpg" alt="other image" class="w3-circle w3-animate-fading   "></img> 
+        </div>
+        
+        <div id="tgtImg1" class="" > <!-- style="" -->
+        <!--   <h1>The w3-circle Class</h1> --> 
+          <img src="./img/AllIsWell3.jpg" alt="other image" class="w3-circle w3-animate-fading"></img> 
+        </div>
+
+      </div>
+      <span id="spDate" style="display: inline-block;">/date/</span>
+      &nbsp;</p>
+    </div>
+    <div>
+      &nbsp;</p>
+      <span id="imsg" style="display: inline-block;">fsfd</span>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+
+function jsRes () {
+    alert('jkRes');
+}

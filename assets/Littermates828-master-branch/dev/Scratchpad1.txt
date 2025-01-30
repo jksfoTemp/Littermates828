@@ -1,0 +1,9 @@
+
+/* 
+C:\Temp\LittermatesLocal\dev\Scratchpad1.txt 
+*/
+
+// Note that dir will not show hiddent (like .git) so use dir /a H then dir 
+
+git commit -m "Local commit for Littermates828 and general DEV because things were getting out of hand"
+
