@@ -1,3 +1,6 @@
+"Not curated, historic file dump. Should be safe for PI."
+
+
 Stuff related to 828, a time in life, also aliased as 'L8',
 the Littermates828 repo and other club projects
 
